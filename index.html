@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="validation.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="image-box">
+            <div class="logo-box">
+                <img id="odin" src="images/odin-lined.png">
+                <p id="odin-text">The Odin Project</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                <p id="mainText"> This is not a real online service. You know you need something
+                    like this in your life to help you realize your deepest dreams. 
+                    Sign up <i>now</i> to get started.
+                </p><br>
+                <p>You <i>know</i> what you want to.</p>
+            </div>
+            <form action="/" method="post" id="form">
+            <fieldset>
+            <legend><p>Let's do this!</p></legend>
+                <div class="allInputs">
+                    <div class="inputControl">
+                        <label for="firstName" id="firstNameLable">FIRST NAME*</label>
+                        <div class="input-wrapper"><input type="text" name="firstName" id="firstName" autocomplete="off"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputControl">
+                        <label for="lastName" id="lastNameLabel">LAST NAME*</label>
+                        <div class="input-wrapper"><input type="text" name="lastName" id="lastName"autocomplete="off"></div>
+                        <div class="error"> </div>
+                    </div>
+                    <div class="inputControl">
+                        <label for="email" id="emailLabel">EMAIL*</label>
+                        <div class="input-wrapper"><input type="email" name="email" id="email"autocomplete="off"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputControl">
+                        <label for="tel" id="telLabel">PHONE NUMBER</label>
+                        <div class="input-wrapper"><input type="tel" name="tel" id="tel"autocomplete="off"></div>
+                        <div class="error"> </div>
+                    </div>
+                    <div class="inputControl">
+                        <label for="pwd" id="pwdLabel">PASSWORD*</label>
+                        <div class="input-wrapper"><input type="password" name="pwd" id="pwd"></div>
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputControl">
+                        <label for="confPwd" id="confPwdLabel">CONFIRM PASSWORD*</label>
+                        <div class="input-wrapper"><input type="password" name="confPwd" id="confPwd"></div>
+                        <div class="error"> </div>
+                    </div>
+                </div>
+            </fieldset>
+            </form>
+            <div class="addition">
+                <button form="form" type="submit" id="submitBtn">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

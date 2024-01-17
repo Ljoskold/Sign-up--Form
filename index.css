@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Norse;
+    src: url(Norse-Bold.otf);
+}
+.inputControl {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    font-family: ui-sans-serif;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+}
+.image-box {
+    position: relative;
+    width: 40%;
+    display: flex;
+    background-image: url(images/Forest.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 25px rgb(0, 0, 0);
+    z-index: 1;
+    filter: contrast(140%);
+    flex-wrap: wrap;
+}
+.image-box img{
+    width: 100%;
+    height: 100%;
+}
+.logo-box {
+    width: 100%;
+    height: 150px;
+    background-color: #010101;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+#odin {
+    width: 150px;
+    height: 150px;
+}
+#odin-text {
+    z-index: 1;
+    color: #FFE7D3;
+    font-size: 3rem;
+    font-family: Norse;
+}
+.content {
+    width: 60%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+
+}
+.content > .header {
+    flex-basis:30%;
+}
+.content > form {
+    flex-basis:40%;
+}
+.content > .addition{
+    flex-basis:30%;
+}
+.header {
+    background-color: rgb(44, 60, 60);
+    padding: 20px 0px 0px 40px;
+    color: #FFE7D3;
+    font-size: 1.8rem;
+}
+form {
+    background-color: azure;
+    padding: 0px 0px 0px 40px;
+}
+legend p {
+    position: relative;
+    font-size: 3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px 0px 25px 0px;
+}
+.addition {
+    width: 100%;
+    background-color: rgb(44, 60, 60);
+    padding: 20px 0px 0px 40px;
+    color: white;
+}
+.addition p {
+    margin-top: 10px;
+}
+.addition a {
+    text-decoration: none;
+    color: rgb(0, 177, 168);
+
+}
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: row; 
+    /* gap: 100px; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 700px;
+}
+
+/* .row1, .row2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    color: rgb(32, 32, 32);
+    position: relative;
+    box-sizing: border-box;
+} */
+.allInputs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    color: rgb(32, 32, 32);
+    /* position: relative;
+    box-sizing: border-box; */
+    justify-content: space-between;
+}
+.inputControl input {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgb(215, 215, 215);
+    font-size: 1.3rem;
+    padding-left: 5px;
+    outline: none;
+    transition: border 0.5s;
+    -webkit-transition: border 0.5s;
+    box-sizing: border-box;
+    border: 2px solid rgba(98, 133, 133, 0.48);
+}
+#submitBtn {
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem;
+    background-color: rgb(0, 177, 168);
+}
+#submitBtn:hover {
+    background-color: rgb(0, 227, 215);
+}
+#firstNameLable::before {
+    content: url(icons/person_FILL1_wght400_GRAD0_opsz20.svg);
+    vertical-align: middle;
+}
+#emailLabel::before {
+    content: url(icons/mail.svg);
+    vertical-align: middle;
+}
+#pwdLabel::before {
+    content: url(icons/pwd.svg);
+    vertical-align: middle;
+}
+#telLabel::before {
+    content: url(icons/tel.svg);
+    vertical-align: middle;
+}
+#lastNameLabel::before {
+    content: url(icons/person_FILL1_wght400_GRAD0_opsz20.svg);
+    vertical-align: middle;
+}
+#confPwdLabel::before {
+    content: url(icons/pwd.svg);
+    vertical-align: middle;
+}
+.inputControl .error {
+    /* position: relative; */
+    font-size: 1rem;
+    color: red;
+    height: 1.4rem;
+}
+.inputControl.success input {
+    border: 2px solid green; 
+}
+.inputControl.error input {
+    border:2px solid red;
+}
+.inputControl.success .input-wrapper::after {
+    content: url(icons/YES.svg);
+    vertical-align: middle;
+    position: absolute;
+    margin-top: 8px;
+}
+.inputControl.error .input-wrapper::after {
+    content: url(icons/NO.svg);
+    vertical-align: middle;
+    position: absolute;
+    margin-top: 8px;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .image-box,
+    .content {
+        flex: 100%;  /* Take up 100% of the width */
+        order: 0;    /* Reset the order */
+    }
+    .header {
+        flex:15%;
+    }
+}
