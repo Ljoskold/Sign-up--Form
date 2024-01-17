@@ -61,7 +61,7 @@ function validateInput(input) {
                     setSuccess (firstName);
                 }
                 break;
-                
+
             case 'lastName': 
                 if (trimmedValue === '') {
                     setError (lastName, 'This field is required');
@@ -89,12 +89,6 @@ function validateInput(input) {
                         break;
 }
 }
-
-// form.addEventListener('blur', e => {
-//     if (e.target.tagName === 'INPUT' && e.target.value.trim() === '') {
-//         e.target.classList.add('invalid');
-//     }
-// });
 
 function setError(element, message) {
     const inputControl = element.parentElement.parentElement;
@@ -204,18 +198,3 @@ function validateInputs() {
     submitBtn.innerText = "Success!";
     submitBtn.style.backgroundColor = "green";
 }
-// function validateAllInputs() {
-//     const inputs = form.querySelectorAll('input');
-//     const submitBtn = document.getElementById("submitBtn");
-
-//     for (const input of inputs) {
-//         validateInput(input);
-
-//         const inputControl = input.parentElement.parentElement;
-//         if (inputControl.classList.contains('error')) {
-//             return false;
-//         }
-//     }
-//     submitBtn.innerText = "Success!";
-//     return true;
-// }

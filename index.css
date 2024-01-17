@@ -48,7 +48,7 @@
     margin-top: 90px;
 }
 #odin {
-    width: 150px;
+    width: 120px;
     height: 150px;
 }
 #odin-text {
@@ -56,6 +56,21 @@
     color: #FFE7D3;
     font-size: 3rem;
     font-family: Norse;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    background-color: rgba(255, 0, 0, 0.443);
+    color: black;
+    float:left;
+    z-index: 2;
+    text-align: center;
+    font-size: 1rem;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 .content {
     width: 60%;
@@ -83,6 +98,9 @@ form {
     background-color: azure;
     padding: 0px 0px 0px 40px;
 }
+legend {
+    display: flex;
+}
 legend p {
     position: relative;
     font-size: 3rem;
@@ -107,29 +125,16 @@ fieldset {
     border: none;
     display: flex;
     flex-direction: row; 
-    /* gap: 100px; */
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 700px;
 }
-
-/* .row1, .row2 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    font-size: 1rem;
-    color: rgb(32, 32, 32);
-    position: relative;
-    box-sizing: border-box;
-} */
 .allInputs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 1rem;
     color: rgb(32, 32, 32);
-    /* position: relative;
-    box-sizing: border-box; */
     justify-content: space-between;
 }
 .inputControl input {
@@ -181,7 +186,6 @@ fieldset {
     vertical-align: middle;
 }
 .inputControl .error {
-    /* position: relative; */
     font-size: 1rem;
     color: red;
     height: 1.4rem;
@@ -223,10 +227,32 @@ fieldset {
 @media (max-width: 768px) {
     .image-box,
     .content {
-        flex: 100%;  /* Take up 100% of the width */
-        order: 0;    /* Reset the order */
+        flex: 100%; 
     }
     .header {
         flex:15%;
+    }
+    .allInputs {
+        justify-content: center;
+    }
+    form {
+        padding: 0 0 0 0;
+    }
+    legend {
+        text-align: center;
+    }
+    .addition {
+        flex:0%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 0 0;
+        justify-content: center;
+        align-items: center;
+    }
+    footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
     }
 }
